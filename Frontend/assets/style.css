@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+.header01 #desconto {
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 0;
+  padding: .3em;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 3.3rem;
+  text-align: center;
+  padding: 0.2em;
+  background-color: white;
+  color: #000000;
+  font-weight: 550;
+
+}
+
+.header02 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  background-image: url('./img/banner.jpg');
+  max-width: 100vw;
+  background-position-x: center;
+  padding: 6em 0 34em 6em;
+  color: white;
+}
+.header02 #fraseEfeito {
+    font-size: 1.6rem;
+}
+
+.header02 #descricaoHeader{
+    max-width: 40em;
+    margin-top: 1em;
+}
+@media (max-width: 450px) {
+    .header02 #descricaoHeader {
+        max-width: 10em;
+    }
+    .header02 #fraseEfeito {
+        max-width: 15em;
+    }
+    .header02 {
+        background-position-x: center;
+        padding-left: 1em;
+    }
+}      
+
+#main01{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 4em 0;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+#main01 p{
+    margin-top: 1em;
+}
+
+#main02{
+    background-color: #afafaf9f;
+    margin: 2em;
+    padding: 1em;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    margin: 1em;
+    max-width: 400px;
+    padding: 1em;
+    box-shadow: 1px 2px 12px 1px rgba(0,0,0,0.6);
+}
+
+.card img{
+    max-width: 400px;
+    transition: .6s;
+}
+
+.card img:hover{
+    transform: scale(1.03);
+}
+.modelo{
+    border-top: 2px solid black;
+    padding: .8em;
+    margin-top: 2em;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.descricao{
+    text-align:left;
+}
+.preco{
+    margin-top: .5em;
+    font-weight: 700;
+}
+
+
+@media (max-width: 540px) {
+    .card img{
+        max-width: 200px;
+        
+        
+    }
+    .modelo{
+        font-size: 1rem;
+    } 
+}
+
+footer{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 4em;
+    text-align: center;
+    margin-top: 10em;
+    font-size: 1.1rem;    
+}
+
+footer a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
