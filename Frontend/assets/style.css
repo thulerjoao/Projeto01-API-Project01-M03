@@ -47,11 +47,13 @@ h1 {
 }
 .header02 #fraseEfeito {
     font-size: 1.6rem;
+    background-color: #00000060;
 }
 
 .header02 #descricaoHeader{
     max-width: 40em;
     margin-top: 1em;
+    background-color: #00000060;
 }
 @media (max-width: 450px) {
     .header02 #descricaoHeader {
@@ -82,10 +84,15 @@ h2{
     margin-top: 1em;
 }
 
-#main02{
+#main02, #resultadoBusca{
     background-color: #afafaf9f;
     margin: 2em;
     padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 210px;
 }
 
 .card{
@@ -94,14 +101,16 @@ h2{
     justify-content: center;
     background-color: #ffffff;
     margin: 1em;
-    max-width: 400px;
+    max-width: 360px;
     padding: 1em;
     box-shadow: 1px 2px 12px 1px rgba(0,0,0,0.6);
+    margin: 2rem 0;
 }
 
 .card img{
     max-width: 400px;
     transition: .6s;
+    align-self: auto;
 }
 
 .card img:hover{
@@ -117,10 +126,40 @@ h2{
 }
 .descricao{
     text-align:left;
+    min-height: 170px;
 }
 .preco{
     margin-top: .5em;
     font-weight: 700;
+}
+
+.botoesDelEdit{
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#btnEditar, #btnApagar, #btnMinimizar{
+    margin: .3em 0;
+    margin-right: .4em;
+    padding: 0 .3em;
+    cursor: pointer;
+    min-width: 60px;
+    font-weight: 600;
+}
+
+#btnEditar:hover{
+    background-color: #00ff08;
+    border-style: none;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+#btnApagar:hover{
+    background-color: #fd2c2c;
+    border-style: none;
+    border: 1px solid black;
+    border-radius: 3px;
 }
 
 
@@ -149,3 +188,120 @@ footer a{
     text-decoration: none;
 }
 
+#jordanEscolhido{
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#jordanEscolhido h3{
+    margin-bottom: .5em;
+}
+#busca{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+#busca button {
+    cursor: pointer;
+}
+
+#resultadoBusca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnCadastrar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3em;
+    padding: 3em;
+    border-left: 2px solid black;
+}
+
+.btnCadastrar button{
+    margin-top: .8em;
+}
+
+.modal-overlay{
+    background-color: #00000050;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.modal{
+    margin: 1em;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    min-height: 300px;
+    background-color: #afafaff1;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #ffffffa5;
+}
+
+.close-modal{
+    text-decoration: none;
+    color:#ff0000;
+    font-size: 1.8rem;
+    transition: all 0.1s;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.close-modal:hover{
+    transform: scale(1.2);
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header{
+
+}
+
+.modal-body{
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;    
+}
+
+.modal-body input, textarea{
+    margin: .5em 0;
+    width: 100%;
+    outline: none;
+    padding-left: .3rem;
+}
+
+.modal-body button {
+    margin: .5em;
+    width: 200px;
+}
