@@ -5,7 +5,7 @@ const jordans = [
     descricao:
       'O modelo, super exclusivo, nas cores preto, cinza e branco lembra o clássico Air Jordan 1 "Shadow"',
     foto: './assets/img/jordan_01.jpg',
-    preco: 2800.9,
+    preco: 2800,
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const jordans = [
     descricao:
       'Esse é o Air Jordan 1 Mid, na colorway "Shattered backboard" que tem esse nome em referência ao episódio em que Michael Jordan quebrou o vidro da cesta ao fazer uma enterrada em 1985',
     foto: './assets/img/jordan_02.jpg',
-    preco: 1800.0,
+    preco: 1800,
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const jordans = [
     descricao:
       'Este Air Jordan 1 Mid combina o melhor dos 2 mundos: discreto e irreverente',
     foto: './assets/img/jordan_03.jpg',
-    preco: 1999.9,
+    preco: 1999,
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const jordans = [
     descricao:
       'Nunca viu esse modelo no Brasil? Te explicamos! O Jordan 1 Mid "White Gold Black" é um modelo de muito sucesso lançado somente nos Estados Unidos e Europa',
     foto: './assets/img/jordan_04.jpg',
-    preco: 1890.0,
+    preco: 1890,
   },
 ];
 
