@@ -6,7 +6,7 @@ const connectToDatabase = () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
-    .then(() => console.log('MongoDb Connected!'))
+    .then(() => console.log('MongoDb Atlas Connected!'))
     .catch((error) => console.log(`Erro connecting${error}`));
 };
 
