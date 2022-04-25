@@ -1,17 +1,16 @@
 const mongoose = require('mongoose');
 
 const validId = (req, res, next) => {
-    const id = req.params.id;
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).send({ message: 'Id inválido.' });
-    }else{
-        next()
-    }
-    
-}
+  const id = req.params.id;
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).send({ message: 'Id inválido.' });
+  } else {
+    next();
+  }
+};
 
-const validObjectBody = (req, res, next) =>{
-    const jordan = req.body;
+const validObjectBody = (req, res, next) => {
+  const jordan = req.body;
   if (
     !jordan ||
     !jordan.modelo ||
@@ -24,9 +23,9 @@ const validObjectBody = (req, res, next) =>{
       .send({ message: 'Cadastro Inválido. Preencha todos os campos.' });
   }
   next();
-}
+};
 
 module.exports = {
-    validId,
-    validObjectBody,
-}
+  validId,
+  validObjectBody,
+};

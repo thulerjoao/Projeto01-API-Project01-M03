@@ -1,4 +1,4 @@
-const Jordans = require('../models/Jordan')
+const Jordans = require('../models/Jordan');
 
 const findAllJordansService = async () => {
   const allJordans = await Jordans.find();
@@ -11,12 +11,12 @@ const findByIdJordanService = async (id) => {
 };
 
 const createJordanService = async (jordan) => {
-  const newJordan = await Jordans.create(jordan)
+  const newJordan = await Jordans.create(jordan);
   return newJordan;
 };
 
 const updateJordanService = async (id, jordanEdit) => {
-  const jordanUpdate = await Jordans.findByIdAndUpdate(id, jordanEdit)
+  const jordanUpdate = await Jordans.findByIdAndUpdate(id, jordanEdit);
   return jordanUpdate;
 };
 
