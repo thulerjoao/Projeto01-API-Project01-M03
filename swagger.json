@@ -8,5 +8,14 @@
         "email": "thuler_lima@hotmail.com"
       },
       "version": "1.0.0"
-    }
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000/jordanss",
+        "description": "API de teste"
+      },
+      {
+        "url": "https://api-jordanstore-blue.onrender.com",
+        "description": "API de produção"
+      }]
 }
