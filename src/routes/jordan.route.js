@@ -8,8 +8,8 @@ const {
   validObjectBody,
 } = require('../middlewares/jordan.middleware');
 
-route.use('api/docs', swaggerUi.serve)
-route.get('api/docs', swaggerUi.setup(swaggerDocument))
+route.use('api-docs', swaggerUi.serve)
+route.get('api-docs', swaggerUi.setup(swaggerDocument))
 
 route.get('/all-jordans', controllerJordans.findAllJordansController);
 route.get(
