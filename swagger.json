@@ -1,0 +1,12 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "API Jordan Store",
+      "description": "API para CRUD da loja Jordan Store e carrinho de compras",
+      "termsOfService": "",
+      "contact": {
+        "email": "thuler_lima@hotmail.com"
+      },
+      "version": "1.0.0"
+    }
+}

@@ -1,9 +1,15 @@
 const route = require('express').Router();
 const controllerJordans = require('../controllers/jordan.controller');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('../../swagger.json')
+
 const {
   validId,
   validObjectBody,
 } = require('../middlewares/jordan.middleware');
+
+route.use('api/docs', swaggerUi.serve)
+route.get('api/docs', swaggerUi.setup(swaggerDocument))
 
 route.get('/all-jordans', controllerJordans.findAllJordansController);
 route.get(
