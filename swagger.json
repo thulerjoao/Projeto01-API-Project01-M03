@@ -17,5 +17,64 @@
       {
         "url": "https://api-jordanstore-blue.onrender.com/jordans",
         "description": "API de produção"
-      }]
+      }],
+      "paths":{
+        "/all-paletas":{
+          "get":{
+            "summary": "Lista de todos os jordans",
+            "description": "Rota responsável por listar todos os jordans",
+            "tags": ["Jordans"],
+            "responses": {
+              "404": {
+                "description": "Not Found"
+              },
+              "200":{
+                "description": "Ok",
+                "content":{
+                  "application/json":{
+                    "schema":{
+                        "type":"array",
+                        "items":{
+                          "$ref": "#/components/schemas/Jordans"
+                        }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "components":{
+        "schema":{
+          "Jordans":{
+            "type":"object",
+            "properties":{
+              "modelo":{
+                "type":"string"
+              },
+              "descricao":{
+                "type":"string"
+              },
+              "foto":{
+                "type":"string"
+              },
+              "preco":{
+                "type":"number"
+              }
+            }
+          },
+          "carrinho":{
+            "type":"object",
+            "properties":{
+              "jordanId":{
+                "type":"string"
+              },
+              "quantidade":{
+                "type":"number"
+              }
+          }
+          
+        }
+      }
 }
