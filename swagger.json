@@ -46,7 +46,7 @@
         }
       },
       "components":{
-        "schema":{
+        "schemas":{
           "Jordans":{
             "type":"object",
             "properties":{
