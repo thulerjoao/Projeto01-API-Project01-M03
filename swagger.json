@@ -73,6 +73,121 @@
               }
             }
           }
+        },
+        "/create-jordan": {
+          "post": {
+            "summary": "Cadastrar um jordan",
+            "description": "Rota responsável por cadastrar um jordan",
+            "tags": ["Jordans"],
+            "requestBody": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Jordans"
+                  },
+                  "examples": {
+                    "Jordans": {
+                      "value": {
+                        "modelo": "Jordan 1 High Rebellionaire 35",
+                        "descricao": "O modelo, super exclusivo, nas cores preto, cinza e branco lembra o clássico Air Jordan 1 'Shadow'",
+                        "foto": "./assets/img/jordan_01.jpg",
+                        "preco": 2800
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "responses": {
+              "400": {
+                "description": "Bad Request"
+              },
+              "201": {
+                "description": "Created",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "$ref": "#/components/schemas/Jordans"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/update-jordan/{id}": {
+          "put": {
+            "summary": "Editar um jordan pelo ID",
+            "description": "Rota responsável por editar um jordan pelo ID",
+            "tags": ["Jordans"],
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "description": "Id do jordan para a busca",
+                "required": true
+              }
+            ],
+            "requestBody": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Jordans"
+                  },
+                  "examples": {
+                    "Jordans": {
+                      "value": {
+                        "modelo": "Jordan 1 High Rebellionaire 35",
+                        "descricao": "O modelo, super exclusivo, nas cores preto, cinza e branco lembra o clássico Air Jordan 1 'Shadow'",
+                        "foto": "./assets/img/jordan_01.jpg",
+                        "preco": 2800
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "responses": {
+              "400": {
+                "description": "Bad Request"
+              },
+              "200": {
+                "description": "OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "$ref": "#/components/schemas/Jordans"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/delete-jordan/{id}": {
+          "delete": {
+            "summary": "Apagar um jordan pelo ID",
+            "description": "Rota responsável por apagar um jordan pelo ID",
+            "tags": ["Jordans"],
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "description": "Id do jordan para deleção",
+                "required": true
+              }
+            ],
+            "responses": {
+              "400": {
+                "description": "Bad Request"
+              },
+              "200": {
+                "description": "OK"
+              }
+            }
+          }
         }
       },
       "components":{
@@ -93,19 +208,7 @@
                 "type":"number"
               }
             }
-          },
-          "carrinho":{
-            "type":"object",
-            "properties":{
-              "jordanId":{
-                "type":"string"
-              },
-              "quantidade":{
-                "type":"number"
-              }
           }
-          
-        }
       }
 }
 }
