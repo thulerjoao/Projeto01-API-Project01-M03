@@ -1,4 +1,4 @@
-const router = require('express').router();
+const router = require('express').Router();
 const controllerJordans = require('../controllers/jordan.controller');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../../swagger.json')
