@@ -1,4 +1,5 @@
-const route = require('express').Router();
+const express = require('express');
+const router = require('express').routerr();
 const controllerJordans = require('../controllers/jordan.controller');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../../swagger.json')
@@ -8,30 +9,30 @@ const {
   validObjectBody,
 } = require('../middlewares/jordan.middleware');
 
-route.use('api-docs', swaggerUi.serve)
-route.get('api-docs', swaggerUi.setup(swaggerDocument))
+router.use('/api-docs', swaggerUi.serve);
+router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
-route.get('/all-jordans', controllerJordans.findAllJordansController);
-route.get(
+router.get('/all-jordans', controllerJordans.findAllJordansController);
+router.get(
   '/one-jordan/:id',
   validId,
   controllerJordans.findByIdJordanController,
 );
-route.post(
+router.post(
   '/create-jordan',
   validObjectBody,
   controllerJordans.createJordanController,
 );
-route.put(
+router.put(
   '/update-jordan/:id',
   validId,
   validObjectBody,
   controllerJordans.updateJordanController,
 );
-route.delete(
+router.delete(
   '/delete-jordan/:id',
   validId,
   controllerJordans.deleteJordanController,
 );
 
-module.exports = route;
+module.exports = router;

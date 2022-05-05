@@ -15,5 +15,5 @@ app.use('/jordans', route);
 
 // Listen port
 app.listen(port, () => {
-  console.log(`Servidor rodando em na porta ${port}`);
+  console.log(`Servidor rodando em http://localhost:${port}`);
 });

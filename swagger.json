@@ -11,11 +11,11 @@
     },
     "servers": [
       {
-        "url": "http://localhost:3000/jordanss",
+        "url": "http://localhost:3000/jordans",
         "description": "API de teste"
       },
       {
-        "url": "https://api-jordanstore-blue.onrender.com",
+        "url": "https://api-jordanstore-blue.onrender.com/jordans",
         "description": "API de produção"
       }]
 }
