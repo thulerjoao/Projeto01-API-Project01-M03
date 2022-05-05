@@ -19,7 +19,7 @@
         "description": "API de produção"
       }],
       "paths":{
-        "/all-paletas":{
+        "/all-jordan":{
           "get":{
             "summary": "Lista de todos os jordans",
             "description": "Rota responsável por listar todos os jordans",
@@ -43,7 +43,37 @@
               }
             }
           }
-        }
+        },"/one-jordan/{id}": {
+          "get": {
+            "summary": "Busca uma paleta pelo ID",
+            "description": "Rota responsável por buscar um jorjan pelo seu ID",
+            "tags": ["Jordans"],
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "description": "Id do jordan para a busca",
+                "required": true
+              }
+            ],
+            "responses": {
+              "400": {
+                "description": "Bad Request"
+              },
+              "200": {
+                "description": "OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "$ref": "#/components/schemas/Jordans"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
       },
       "components":{
         "schemas":{
