@@ -19,7 +19,7 @@
         "description": "API de produção"
       }],
       "paths":{
-        "/all-jordan":{
+        "/all-jordans":{
           "get":{
             "summary": "Lista de todos os jordans",
             "description": "Rota responsável por listar todos os jordans",
@@ -46,7 +46,7 @@
         },"/one-jordan/{id}": {
           "get": {
             "summary": "Busca uma paleta pelo ID",
-            "description": "Rota responsável por buscar um jorjan pelo seu ID",
+            "description": "Rota responsável por buscar um jordan pelo seu ID",
             "tags": ["Jordans"],
             "parameters": [
               {
